@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo 1</title>
+
+	<style type="text/css">
+		h3, form {
+			text-align: center;
+		}
+		input {
+			width: 80%;
+		}
+		#result {
+			text-align: center;
+		}
+		body {
+			display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    padding-top: 100px;
+		}
+	</style>
+</head>
+<body>
+	<h3>Search a phrase</h3>
+
+	<form method="get" action="/first">
+		<input type="text" name="phrase">
+		<button type="submit">Search</button>
+	</form>
+
+	<% if(phrase){ %>
+	<p id="result">
+		Search results for <b> <%- phrase %> </b>
+	</p>
+	<% } %>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Demo 2</title>
+	<style type="text/css">
+		h3, form {
+			text-align: center;
+		}
+		input {
+			width: 80%;
+		}
+		body {
+			display: flex;
+		    flex-direction: column;
+		    justify-content: center;
+		    padding-top: 100px;
+		}
+		#result {
+			padding-left: 5%;
+		}
+	</style>
+</head>
+<body>
+	<h3>Add your comment</h3>
+
+	<form method="post" action="/search">
+		<input type="text" name="content" id="myInput">
+		<button type="submit">Add</button>
+	</form>
+
+	<div id="result">
+		<ul>
+		<% comments.forEach((comment) => { %>
+			<li> <%- comment.content %> </li>
+		<% }) %>
+		</ul>
+	</div>
+
+</body>
+</html>
